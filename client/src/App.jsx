@@ -1,4 +1,3 @@
-import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Category from './components/Category';
 import Vases from './components/Vases';
