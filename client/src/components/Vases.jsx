@@ -1,13 +1,12 @@
+
 import  { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Vases.css';
-
-
 const Vases = () => {
   const [vases, setVases] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/api/vases') // Ensure the API URL is correct
+    axios.get('http://localhost:3000/api/vases')
       .then((response) => {
         setVases(response.data);
       })
