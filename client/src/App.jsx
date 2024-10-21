@@ -1,13 +1,21 @@
-import { useState } from 'react'
-import './App.css'
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Category from './components/Category';
+import Vases from './components/Vases';
 
-function App() {
-
+const App = () => {
   return (
-    <>
-      <div>Test Commit</div>
-    </>
-  )
-}
+    <div>
+      <Category />
+      <Routes>
+        
+        <Route path="/vases" element={<Vases />} />
+        {/* Add other routes for other categories here */}
+      </Routes>
+    </div>
+  );
+};
 
-export default App
+export default App;
+
+
