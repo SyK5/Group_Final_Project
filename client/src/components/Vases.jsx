@@ -6,11 +6,7 @@ const Vases = () => {
   const [vases, setVases] = useState([]);
 
   useEffect(() => {
-<<<<<<< HEAD
-    axios.get('http://localhost:3000/api/vases')
-=======
     axios.get('http://localhost:3000/api/vases') 
->>>>>>> b0e53bd43dbb22aa526d2385a7910e192e669e40
       .then((response) => {
         setVases(response.data);
       })
