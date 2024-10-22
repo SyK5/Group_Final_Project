@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { Outlet } from "react-router-dom";
+import Category from "./Category";
 // import Navbar from "../components/Navbar";
 // import { MainContext } from "../contexts/Context_main";
 
@@ -9,7 +10,7 @@ const Layout = () => {
 
   return (
     <div className="app" style={{ width: '100vw', height: '100vh', overflow: 'hidden' }}>
-      {/* <Navbar /> */}
+      <Category />
       <Outlet />
     </div>
   );

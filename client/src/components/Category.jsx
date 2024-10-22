@@ -1,6 +1,8 @@
 import { useState}  from 'react';
-import { Link } from 'react-router-dom';
 import './Category.css';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
 
 const Category = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,7 +12,7 @@ const Category = () => {
   };
 
   return (
-    <div>
+    <div className='Category-Nav'>
       <button onClick={togglePanel} className="category-button">
         Category
       </button>
