@@ -3,7 +3,6 @@ import vasesRoutes from './vases.js';
 import cors from 'cors';
 
 
-
 const app = express();
 const port = 3000;
 
@@ -13,6 +12,10 @@ app.use(express.json());
 
 // Routes
 app.use('/api/vases', vasesRoutes);
+
+app.get('/', (res, req) => {
+  res.json({message: 'Hello'})
+})
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
