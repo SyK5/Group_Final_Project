@@ -8,7 +8,7 @@ import Layout from './components/Layout.jsx';
 function App() {
   return (
     <div>
-      <Category />
+      
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
