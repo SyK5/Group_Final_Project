@@ -1,4 +1,4 @@
-[
+export default [
   {
     "id": 1,
     "name": "Isfahan Naghsh on silk",

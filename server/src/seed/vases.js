@@ -1,4 +1,4 @@
-[
+export default [
     {
       "id": 1,
       "name": "Casa Padrino Luxury Baroque Decorative Vase White",

@@ -10,7 +10,7 @@ const Category = () => {
   };
 
   return (
-    <div>
+    <div className='Category-Nav'>
       <button onClick={togglePanel} className="category-button">
         Category
       </button>
