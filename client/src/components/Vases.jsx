@@ -1,8 +1,7 @@
-import { useEffect, useState } from 'react';
+
+import  { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Vases.css';
-
-
 const Vases = () => {
   const [vases, setVases] = useState([]);
 

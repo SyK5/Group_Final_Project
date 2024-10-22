@@ -1,5 +1,5 @@
 import express from 'express';
-import vases from '../APIs/vases.json' assert { type: 'json' };
+import vases from './seed/vasesApi.js';
 
 
 
