@@ -1,5 +1,5 @@
 import express from 'express';
-import vasesRoutes from './vases.js'; // Import vase routes
+import vasesRoutes from './vases.js';
 import cors from 'cors';
 
 

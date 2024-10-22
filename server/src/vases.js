@@ -1,5 +1,6 @@
 import express from 'express';
-import vases from './vases.json' assert { type: 'json' };
+import vases from '../APIs/vases.json' assert { type: 'json' };
+
 
 
 const router = express.Router();
