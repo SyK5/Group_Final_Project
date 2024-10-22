@@ -1,5 +1,5 @@
 import express from 'express';
-import vases from './seed/vases.js';
+import vases from './seed/vasesApi.js';
 
 
 
