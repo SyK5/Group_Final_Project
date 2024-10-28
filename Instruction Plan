@@ -1,0 +1,20 @@
+0.  Login/Register page (Route)
+
+  -  4+ scroll able reviews about the page
+
+  - Login or register page have own route.
+
+x. for flexibility:
+
+each category and each toggle have his own route (page)
+and working alone.
+
+1. First page (after login)
+
+  1.1 (Toogle)
+      - Home
+      - Profile
+      - Order
+      - Cart
+      - Logout
+
