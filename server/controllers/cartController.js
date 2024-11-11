@@ -38,4 +38,15 @@ const getUserCart = async (userId) => {
     return cart;
 };
 
-module.exports = {createCart, addItemToCart, getUserCart};
+const deleteItemFromCart = async (userId, productId) => {
+    const cart = await Cart.findOne({user: userId});
+    if (!cart) throw new Error("Cart not found");
+    
+    cart.items = cart.items.filter(item => item.productId.toString() !== productId);
+cart.totalPrice = cart.item.reduce((total, item) => total + item.quantity * item.price, 0);
+
+await cart.save();
+return cart;
+}
+
+module.exports = {createCart, addItemToCart, getUserCart, deleteItemFromCart};
