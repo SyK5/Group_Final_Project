@@ -1,22 +1,19 @@
-possible used Colors : #101820FF  #F2AA4CFF
+possible used Colors : #101820FF  #F2AA4CFF  #58F3F3
 
-0.  Login/Register page (Route)
-
-  -  4+ scroll able reviews about the page
-
-  - Login or register page have own route.
-
-x. for flexibility:
-
-each category and each toggle have his own route (page)
-and working alone.
-
-1. First page (after login)
+font : #101820FF
+font hover : #58F3F3
+div contain :  #F2AA4CFF
+hearth : #FF3300
+Footer : #FFCCDC 
+Support : #D5D9DD
 
   1.1 (Toogle)
       - Home
-      - Profile
-      - Order
+      - Profile - Order
       - Cart
       - Logout
+
+
+to dos are in 
+https://trello.com
 
