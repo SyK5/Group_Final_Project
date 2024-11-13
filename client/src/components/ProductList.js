@@ -1,5 +1,5 @@
 // ProductList.js
-import React from 'react';
+import React from "react";
 
 const ProductList = ({ products, addToCart }) => {
   return (
