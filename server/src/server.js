@@ -10,7 +10,7 @@ const port = 3000;
 app.use(cors({ origin: '*' }))
 app.use(express.json());
 
-app.use('/api/vases', vasesRoutes);
+app.use('/seed/vases', vasesRoutes);
 
 app.get('/', (res, req) => {
   res.json({message: 'Hello'})
