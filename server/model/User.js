@@ -1,23 +1,28 @@
-import { type } from "express/lib/response";
+
 import { Schema, model } from "mongoose";
-import bcrypt from "bcrypt"
+
 
 const userSchema = new Schema ({
     firstName: {
         type: String,
-        required: String,
+        required: true,
 
 
     },
     lastName: {
         type: String,
-        required : String,
+        required : true,
     }, 
     username: {
         type: String,
         required: true,
         unique: true,
         trim: true,
+    },
+    gender: {
+type : String,
+enum : ["female", "male", "female"],
+required: true,
     },
     email: {
         type: String,
@@ -35,8 +40,12 @@ const userSchema = new Schema ({
 
    },
    cartId: {
-    type: 
-   }
-   timestamps: true,
-});
+    type: Schema.Types.ObjectId,
+    ref: "Cart",
+   },
+   
+   
+},
+{timestamps: true,}  );
 
+const User = model("User", userSchema);
