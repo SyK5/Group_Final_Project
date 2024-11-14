@@ -2,39 +2,16 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; 
-<<<<<<< HEAD
-    align-items: center;
-    min-height: 100vh;
-    width: 100vw; 
-    padding: 20px;  
-    box-sizing: border-box;
-  }
-  
-  .vase-item {
-    flex: 0 1 calc(25% - 20px);  /* Four items per row */
-    margin: 10px;
-    max-width: 300px;  /* Maximum width for the vases */
-=======
   }
   
   .vase-item {
     flex: 1 1 calc(33.33% - 20px); 
     margin: 10px; 
     max-width: 300px; 
->>>>>>> b0e53bd43dbb22aa526d2385a7910e192e669e40
     box-sizing: border-box;
   }
   
   .vase-image {
-<<<<<<< HEAD
-    width: 100%;  /* Ensure images take full width of the item */
-    height: auto; /* Maintain aspect ratio */
-    display: block;
-  }
-  
-  h2, p {
-    margin: 5px 0;
-=======
     width: 100%; 
     height: auto; 
     display: block; 
@@ -47,16 +24,11 @@
   
   p {
     margin: 5px 0; 
->>>>>>> b0e53bd43dbb22aa526d2385a7910e192e669e40
   }
   
   @media (max-width: 768px) {
     .vase-item {
-<<<<<<< HEAD
-      flex: 1 1 100%;  /* Full width for smaller screens */
-=======
       flex: 1 1 100%;
->>>>>>> b0e53bd43dbb22aa526d2385a7910e192e669e40
     }
   }
  

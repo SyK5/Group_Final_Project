@@ -3,18 +3,18 @@ import Vases from './components/Vases';
 import Home from "./components/Home.jsx";
 import Layout from "./components/Layout.jsx";
 import './App.scss';
+import LoginPage from "./components/LoginPage.jsx";
 function App() {
   return (
     <div>
       
       <Routes>
+     <Route index element = {<LoginPage/>}/>
+        
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="/vases" element={<Vases />} />
 
-          {/* <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="*" element={<NotFound />} /> */}
         </Route>
       </Routes>
     </div>
