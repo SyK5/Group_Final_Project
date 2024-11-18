@@ -2,13 +2,9 @@ import jwt from "jsonwebtoken";
 
 export const createSendToken = (res, status, user) => {
   const { JWT_EXP, JWT_SECRET, COOKIE_EXP, NODE_ENV } = process.env;
-
- 
-  const jwtToken = jwt.sign({ id: user._id }, JWT_SECRET, {
+   const jwtToken = jwt.sign({ id: user._id }, JWT_SECRET, {
     expiresIn: JWT_EXP,
   });
-
-
   const isProduction = NODE_ENV === "production";
 
   const cookieOptions = {
@@ -18,9 +14,7 @@ export const createSendToken = (res, status, user) => {
     sameSite: isProduction ? "None" : "Lax",
   };
 
- 
-  res.cookie("jwtToken", jwtToken, cookieOptions);
-
+   res.cookie("jwtToken", jwtToken, cookieOptions);
   user.password = undefined;
 
   res.status(status).json({ success: true, status, user });

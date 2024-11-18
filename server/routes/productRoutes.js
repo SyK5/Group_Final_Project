@@ -1,4 +1,5 @@
-const express = require('express');
+import express from 'express';
+
 const { getAllProducts, createProduct } = require('../controllers/ProductController');
 const router = express.Router();
 
