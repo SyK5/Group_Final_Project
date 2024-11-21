@@ -1,21 +1,28 @@
-import express from "express";
-import cors from "cors";
-import cookieParser from "cookie-parser";
-import "dotenv/config";
+const express = require('express');
+const mongoose = require('mongoose');
+require('dotenv').config();
 
-import connectDB from "./libs/database.js";
+const productRoutes = require('./routes/products'); 
+const errorHandler = require('./middleware/errorHandler'); 
 
-await connectDB();
 const app = express();
-const PORT = process.env.PORT ;
+app.use(express.json()); 
 
-app.use(
-  cors({
-    origin: process.env.EXPRESS_CLIENT_URL,
-    credentials: true,
-  })
-);
-app.use(express.json());
-app.use(cookieParser());
 
-app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
+mongoose
+  .connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('Database connected'))
+  .catch((err) => console.error('Database connection error:', err));
+
+
+app.use('/api/products', productRoutes); 
+
+
+app.use(errorHandler);
+
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+});
+
