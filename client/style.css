@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f7f7f7;
+  }
+
+  h1, h2, h3 {
+    text-align: center;
+  }
+  
+  .hero {
+    background: linear-gradient(to bottom, #333, #555);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .cta-button {
+    display: inline-block;
+    margin: 1rem auto;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background: #333;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+
+  .featured-categories, .best-sellers, .about-us, .guidance {
+    padding: 1.5rem;
+}
+
+.category-grid, .product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .category-card, .product-card {
+    background: #ddd;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 5px;
+  }
+
+  .site-footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+  
