@@ -43,6 +43,12 @@ required: true,
     type: Schema.Types.ObjectId,
     ref: "Cart",
    },
+   favorites: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Item", 
+    },
+  ],
    
    
 },
