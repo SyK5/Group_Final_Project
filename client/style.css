@@ -98,27 +98,27 @@
   
   .about-us-container {
     display: flex;
-    align-items: center; /* Vertically centers the image and text */
-    gap: 2rem; /* Space between image and text */
+    align-items: center; 
+    gap: 2rem; 
     max-width: 1200px;
-    margin: 0 auto; /* Centers the content horizontally */
+    margin: 0 auto; 
   }
   
   .about-us-image {
-    flex: 2; /* Image takes up 1/3 of the container */
-    max-width: 300px; /* Optional: Limits the size of the image */
+    flex: 2; 
+    max-width: 300px; 
   }
   
   .about-us-image img {
     width: 100%;
     height: auto;
     border: 1px solid red;
-    border-radius: 10px; /* Adds rounded corners to the image */
-    box-shadow: 0 4px 6px rgba(222, 41, 41, 0.1); /* Adds a soft shadow */
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(222, 41, 41, 0.1); 
   }
   
   .about-us-text {
-    flex: 2; /* Text takes up 2/3 of the container */
+    flex: 2; 
     text-align: left;
   }
   
@@ -149,22 +149,22 @@
   /* Guidance Section */
   
 .guidance-section {
-    background-color: #f3f3f3; /* Light gray background */
-    padding: 2rem 1rem; /* Add space around the section */
+    background-color: #f3f3f3; 
+    padding: 2rem 1rem; 
   }
   
   .guidance-container {
-    display: flex; /* Align items horizontally */
-    justify-content: space-between; /* Space out text and image */
-    align-items: center; /* Vertically center-align content */
-    max-width: 1200px; /* Set a max width */
-    margin: 0 auto; /* Center the content on the page */
-    gap: 1.5rem; /* Add space between the text and image */
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; /
+    max-width: 1200px; 
+    margin: 0 auto; 
+    gap: 1.5rem; 
   }
   
   .guidance-text {
-    flex: 2; /* Text takes 2/3 of the available space */
-    font-family: Arial, sans-serif; /* Example font */
+    flex: 2; 
+    font-family: Arial, sans-serif; 
     text-align: left;
   }
   
@@ -181,22 +181,22 @@
   }
   
   .guidance-image {
-    flex: 1; /* Image takes 1/3 of the available space */
-    max-width: 300px; /* Optional: Set max width for the image */
+    flex: 1; 
+    max-width: 300px; 
   }
   
   .guidance-image img {
-    width: 100%; /* Ensure the image fills its container */
+    width: 100%; /
     height: auto;
-    border-radius: 10px; /* Add rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   }
   
   
   /* General Section Styling */
 section {
     padding: 2rem 1rem;
-    background-color: #f7f7f7; /* Light background color */
+    background-color: #f7f7f7; 
   }
   
   .cta-button {
@@ -238,7 +238,7 @@ section {
     width: 100%;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   }
   
  
