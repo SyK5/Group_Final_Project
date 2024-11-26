@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #d9b212;
+  }
+
+  h1, h2, h3 {
+    text-align: center;
+  }
+  
+  .hero {
+    background: linear-gradient(to bottom, #333, #555);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .cta-button {
+    display: inline-block;
+    margin: 1rem auto;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background: #333;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+
+  .featured-categories, .best-sellers, .about-us, .guidance {
+    padding: 1.5rem;
+}
+
+.category-grid {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .category-card {
+    background: #ddd;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem; 
+    justify-content: center;
+  }
+  
+  .product-card {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 150px; 
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .product-card img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 8px;
+  }
+
+  .site-footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .about-us {
+    padding: 2rem;
+    background-color: #eb9393;
+  }
+  
+  .about-us-container {
+    display: flex;
+    align-items: center; 
+    gap: 2rem; 
+    max-width: 1200px;
+    margin: 0 auto; 
+  }
+  
+  .about-us-image {
+    flex: 2; 
+    max-width: 300px; 
+  }
+  
+  .about-us-image img {
+    width: 100%;
+    height: auto;
+    border: 1px solid red;
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(222, 41, 41, 0.1); 
+  }
+  
+  .about-us-text {
+    flex: 2; 
+    text-align: left;
+  }
+  
+  .about-us-text h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: #333;
+  }
+  
+  .about-us-text p {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #a52424;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    color: #fff;
+    background: #333;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+  
+  
+  /* Guidance Section */
+  
+.guidance-section {
+    background-color: #f3f3f3; 
+    padding: 2rem 1rem; 
+  }
+  
+  .guidance-container {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    gap: 1.5rem; 
+  }
+  
+  .guidance-text {
+    flex: 2; 
+    font-family: Arial, sans-serif; 
+    text-align: left;
+  }
+  
+  .guidance-text h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .guidance-text p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #555;
+  }
+  
+  .guidance-image {
+    flex: 1; 
+    max-width: 300px; 
+  }
+  
+  .guidance-image img {
+    width: 100%; 
+    height: auto;
+    border-radius: 10px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  }
+  
+  
+  /* General Section Styling */
+   .section {
+    padding: 2rem 1rem;
+    background-color: #f7f7f7; 
+  }
+  
+  .cta-button {
+    display: inline-block;
+    background-color: #d0a200;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+  
+  /* Exclusive Items Section */
+  .exclusive-items, .premium-program {
+    background-color: #f3f3f3;
+  }
+  
+  .exclusive-container, .premium-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .exclusive-text, .premium-text {
+    flex: 2;
+    text-align: left;
+  }
+  
+  .exclusive-image, .premium-image {
+    flex: 1;
+    max-width: 300px;
+  }
+  
+  .exclusive-image img, .premium-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  }
+  
+ 
+  

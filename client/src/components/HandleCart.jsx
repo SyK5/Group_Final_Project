@@ -1,4 +1,4 @@
-// App.js
+// App.
 import React, { useState } from 'react';
 import Cart from './Cart';
 import ProductList from './ProductList';
