@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import Registration from "./components/Register.jsx";
 
 import Home from "./components/Home.jsx";
 import Layout from "./components/Layout.jsx";
@@ -9,6 +10,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
+          <Route path="/register" element={<Registration />} />
           <Route path="*" element={<h1>notfound</h1>} />
         </Route>
       </Routes>

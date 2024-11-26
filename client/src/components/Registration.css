@@ -1,0 +1,101 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+  }
+  
+  /* Container */
+  .registration-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  /* Left Section: Image Frame */
+  .image-section {
+    flex: 1;
+    background-color: #58F3F3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .registration-image {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Right Section: Form */
+  .form-section {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .brand-name {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Form Styling */
+  .registration-form {
+    width: 80%;
+    max-width: 400px;
+  }
+  
+  .form-group {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  input, select {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    font-size: 1rem;
+    padding: 5px;
+    outline: none;
+    background: transparent;
+  }
+  
+  input:focus, select:focus {
+    border-bottom: 2px solid #007BFF;
+  }
+  
+  .underline {
+    display: block;
+    height: 2px;
+    background: transparent;
+    margin-top: -2px;
+  }
+  
+  .footer-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+  }
+  
+  .footer-text a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  .footer-text a:hover {
+    text-decoration: underline;
+  }
+  
