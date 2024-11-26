@@ -48,7 +48,7 @@ const moveFavoriteToCart = asyncHandler(async (req, res) => {
   }
   user.favorites = user.favorites.filter((fav) => fav.toString() !== productId);
   if (!user.cart.includes(productId)) {
-    user.cart.push(productId); // Avoid duplicates in cart
+    user.cart.push(productId); 
   }
   await user.save();
 
