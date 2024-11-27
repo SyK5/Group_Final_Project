@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import "./Homeowner.css";
 
-// Sample icons for demonstration (replace with actual icons if you have them)
+
 const Icon = ({ name }) => <span className="icon">{name}</span>;
 
 
@@ -15,7 +15,7 @@ const Homeowner = () => {
 
   // Function to close the modal
   const closeModal = () => {
-    setModalData(null); // Clear modal data to close the modal
+    setModalData(null); 
   };
   return (
     <div>
@@ -214,7 +214,7 @@ const Homeowner = () => {
     {/* Individual Product 3 */}
     <div className="product-item">
       <img
-        src="https://example.com/image3.jpg" // Replace with actual URL
+        src="../images/download.jpeg" // Replace with actual URL
         alt="Sofa"
         className="product-image"
       />
