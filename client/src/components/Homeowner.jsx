@@ -46,12 +46,12 @@ const Homeowner = () => {
         <section className="main-section">
           <div className="image-box">
             <img
-              src="https://example.com/image1.jpg" // Replace with actual URL
+              src="../images/livingroom.jpeg" // Replace with actual URL
               alt="Luxury Item 1"
               className="animated-image image-left"
             />
             <img
-              src="https://example.com/image2.jpg" // Replace with actual URL
+              src="../images/livingroom1.jpeg" // Replace with actual URL
               alt="Luxury Item 2"
               className="animated-image image-right"
             />
@@ -77,8 +77,8 @@ const Homeowner = () => {
             {/* Image 1 */}
             <div className="premium-item">
               <img
-                src="https://example.com/image3.jpg" // Replace with actual URL
-                alt="Premium Item 1"
+                src="client/images/Lounge furniture.png" // Replace with actual URL
+                alt="Lounge furniture"
                 className="premium-image"
               />
               <div className="overlay-text">For Premium Members Only</div>
@@ -90,8 +90,8 @@ const Homeowner = () => {
             {/* Image 2 */}
             <div className="premium-item">
               <img
-                src="https://example.com/image4.jpg" // Replace with actual URL
-                alt="Premium Item 2"
+                src="client/images/dinnertable.webp" // Replace with actual URL
+                alt="Dinner table"
                 className="premium-image"
               />
               <div className="overlay-text">For Premium Members Only</div>
@@ -103,8 +103,8 @@ const Homeowner = () => {
             {/* Image 3 */}
             <div className="premium-item">
               <img
-                src="https://example.com/image5.jpg" // Replace with actual URL
-                alt="Premium Item 3"
+                src="client/images/livingroom 3.jpeg" // Replace with actual URL
+                alt="living room furniture"
                 className="premium-image"
               />
               <div className="overlay-text">For Premium Members Only</div>
