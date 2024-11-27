@@ -167,10 +167,10 @@ const Homeowner = () => {
         <section className="product-section">
   <h2 className="product-title">Explore Our Exclusive Collection</h2>
   <div className="product-grid">
-    {/* Individual Product 1 */}
+    {/* Product 1 */}
     <div className="product-item">
       <img
-        src="https://example.com/image1.jpg" // Replace with actual URL
+        src="https://via.placeholder.com/150" // Replace with actual URL
         alt="Chair"
         className="product-image"
       />
@@ -180,7 +180,7 @@ const Homeowner = () => {
         onClick={() =>
           openModal({
             title: "Luxury Chair",
-            description: "A high-quality luxury chair made of premium materials.",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             price: "$350",
           })
         }
@@ -189,10 +189,10 @@ const Homeowner = () => {
       </button>
     </div>
 
-    {/* Individual Product 2 */}
+    {/* Product 2 */}
     <div className="product-item">
       <img
-        src="https://example.com/image2.jpg" // Replace with actual URL
+        src="https://via.placeholder.com/150"
         alt="Table"
         className="product-image"
       />
@@ -202,7 +202,7 @@ const Homeowner = () => {
         onClick={() =>
           openModal({
             title: "Elegant Table",
-            description: "An elegant wooden table perfect for modern interiors.",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             price: "$450",
           })
         }
@@ -211,10 +211,10 @@ const Homeowner = () => {
       </button>
     </div>
 
-    {/* Individual Product 3 */}
+    {/* Product 3 */}
     <div className="product-item">
       <img
-        src="../images/download.jpeg" // Replace with actual URL
+        src="https://via.placeholder.com/150"
         alt="Sofa"
         className="product-image"
       />
@@ -224,8 +224,7 @@ const Homeowner = () => {
         onClick={() =>
           openModal({
             title: "Comfort Sofa",
-            description:
-              "A comfortable and stylish sofa to add charm to your living room.",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             price: "$900",
           })
         }
@@ -234,7 +233,181 @@ const Homeowner = () => {
       </button>
     </div>
 
-    {/* Add more products here */}
+    {/* Product 4 */}
+    <div className="product-item">
+      <img
+        src="https://via.placeholder.com/150"
+        alt="Video X2"
+        className="product-image"
+      />
+      <h3 className="product-name">Video X2</h3>
+      <button
+        className="more-info-btn"
+        onClick={() =>
+          openModal({
+            title: "Video X2",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            price: "$200",
+          })
+        }
+      >
+        More Information
+      </button>
+    </div>
+
+    {/* Product 5 */}
+    <div className="product-item">
+      <img
+        src="https://via.placeholder.com/150"
+        alt="Table"
+        className="product-image"
+      />
+      <h3 className="product-name">Minimal Table</h3>
+      <button
+        className="more-info-btn"
+        onClick={() =>
+          openModal({
+            title: "Minimal Table",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            price: "$300",
+          })
+        }
+      >
+        More Information
+      </button>
+    </div>
+
+    {/* Product 6 */}
+    <div className="product-item">
+      <img
+        src="https://via.placeholder.com/150"
+        alt="Chair"
+        className="product-image"
+      />
+      <h3 className="product-name">Modern Chair</h3>
+      <button
+        className="more-info-btn"
+        onClick={() =>
+          openModal({
+            title: "Modern Chair",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            price: "$150",
+          })
+        }
+      >
+        More Information
+      </button>
+    </div>
+
+    {/* Product 7 */}
+    <div className="product-item">
+      <img
+        src="https://via.placeholder.com/150"
+        alt="Chair"
+        className="product-image"
+      />
+      <h3 className="product-name">Classic Chair</h3>
+      <button
+        className="more-info-btn"
+        onClick={() =>
+          openModal({
+            title: "Classic Chair",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            price: "$250",
+          })
+        }
+      >
+        More Information
+      </button>
+    </div>
+
+    {/* Product 8 */}
+    <div className="product-item">
+      <img
+        src="https://via.placeholder.com/150"
+        alt="Ad"
+        className="product-image"
+      />
+      <h3 className="product-name">Premium Membership Ad</h3>
+      <button
+        className="more-info-btn"
+        onClick={() =>
+          openModal({
+            title: "Premium Membership",
+            description: "Get exclusive access to premium sales and offers.",
+            price: "Exclusive",
+          })
+        }
+      >
+        More Information
+      </button>
+    </div>
+
+    {/* Product 9 */}
+    <div className="product-item">
+      <img
+        src="https://via.placeholder.com/150"
+        alt="Table"
+        className="product-image"
+      />
+      <h3 className="product-name">Rustic Table</h3>
+      <button
+        className="more-info-btn"
+        onClick={() =>
+          openModal({
+            title: "Rustic Table",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            price: "$400",
+          })
+        }
+      >
+        More Information
+      </button>
+    </div>
+
+    {/* Product 10 */}
+    <div className="product-item">
+      <img
+        src="https://via.placeholder.com/150"
+        alt="Chair"
+        className="product-image"
+      />
+      <h3 className="product-name">Ergonomic Chair</h3>
+      <button
+        className="more-info-btn"
+        onClick={() =>
+          openModal({
+            title: "Ergonomic Chair",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            price: "$275",
+          })
+        }
+      >
+        More Information
+      </button>
+    </div>
+
+    {/* Product 11 */}
+    <div className="product-item">
+      <img
+        src="https://via.placeholder.com/150"
+        alt="Chair"
+        className="product-image"
+      />
+      <h3 className="product-name">Velvet Chair</h3>
+      <button
+        className="more-info-btn"
+        onClick={() =>
+          openModal({
+            title: "Velvet Chair",
+            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            price: "$325",
+          })
+        }
+      >
+        More Information
+      </button>
+    </div>
   </div>
 
   {/* Modal for More Information */}
@@ -255,6 +428,7 @@ const Homeowner = () => {
     </div>
   )}
 </section>
+
       </main>
     </div>
   );
