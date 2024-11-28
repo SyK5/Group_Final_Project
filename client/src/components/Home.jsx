@@ -1,90 +1,94 @@
-// import React, { useEffect, useState } from "react";
-import './Home.css';
+import React, { useEffect, useState } from 'react';
+import Draggable from 'react-draggable';
+import backgroundImage from "../assets/luxury_livi.jpg";
+
 const Home = () => {
-  return (
-    <>
-      <header className="header">
-        <h1>ELVORA</h1>
-        <p>Elegance Beyond the Ordinary</p>
-        <a href="#categories" className="cta-button">Join the experience</a>
-      </header>
+  const [dragPosition, setDragPosition] = useState(0); // Position des Draggen
+  const [imageSize, setImageSize] = useState({ width: window.innerWidth * 1.5, height: window.innerHeight });
+  
+  // Prozentuale Koordinaten des Punktes (bezogen auf das Bild)
+  const [pointPosition, setPointPosition] = useState({ xPercent: 0.38, yPercent: 0.22 });
 
-      <main>
-        <section id="categories" className="featured-categories">
-          <h2>Featured Categories</h2>
-          <div className="category-grid">
-            <div className="category-card">Living Room</div>
-            <div className="category-card">Living Room</div>
-            <div className="category-card">Living Room</div>
-            <div className="category-card">Living Room</div>
-          </div>
-        </section>
-
-        <section className="best-sellers">
-          <h2>Our Best-sellers</h2>
-          <p>Premium only</p>
-          <div className="product-grid">
-            <div className="product-card">Chair</div>
-            <div className="product-card">Chair</div>
-            <div className="product-card">Chair</div>
-          </div>
-        </section>
+  // Funktion zum Anpassen der Bildgröße und Position des Punktes bei Resize
+  const handleResize = () => {
+    const newWidth = window.innerWidth * 1.1; // 110% der Fensterbreite
+    const newHeight = window.innerHeight; // Höhe des Fensters
     
-        <section className="about-us">
-          <div className="about-us-container">
-            <div className="about-us-text">
-              <h2>About us</h2>
-              <p>Exclusivity Guaranteed</p>
-              <p>Uncompromising Quality</p>
-              <p>Carefully curated collection</p>
-              <a href="#more-info" className="cta-button">More infos</a>
-            </div>
-            <div className="about-us-image">
-              <img src="assets/about-us-image.jpg" alt="About Us Image" />
-            </div>
-          </div>
-        </section>
+    // Berechne die neue Position des Punktes basierend auf der prozentualen Position relativ zum neuen Bild
+    const newX = pointPosition.xPercent * newWidth;
+    const newY = pointPosition.yPercent * newHeight;
+    
+    // Aktualisiere die Bildgröße und die neue Position des Punkts
+    setImageSize({ width: newWidth, height: newHeight });
+    setPointPosition({ x: newX, y: newY });
+  };
 
-        <section className="guidance-section">
-          <div className="guidance-container">
-            <div className="guidance-text">
-              <h2>Need some guidance?</h2>
-              <p>Our agents are here to help you with finding the perfect products for you.</p>
-            </div>
-            <div className="guidance-image">
-              <img src="assets/guidance-image.jpg" alt="Guidance Image" />
-            </div>
-          </div>
-        </section>
+  // useEffect zum Hinzufügen und Entfernen des Resize-Event Listeners
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    
+    // Initiale Anpassung beim Laden
+    handleResize();
 
-        <section className="exclusive-items">
-          <div className="exclusive-container">
-            <div className="exclusive-text">
-              <h2>More Exclusive Items?</h2>
-              <p>Discover rare and unique pieces that can't be found anywhere else.</p>
-              <a href="#premium" className="cta-button">More Info</a>
-            </div>
-            <div className="exclusive-image">
-              <img src="assets/exclusive-items.jpg" alt="Exclusive Items" />
-            </div>
-          </div>
-        </section>
+    // Cleanup-Funktion, um den Event-Listener zu entfernen
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
-        <section className="premium-program">
-          <div className="premium-container">
-            <div className="premium-text">
-              <h2>Join Our Premium Program</h2>
-              <p>Become a member and enjoy benefits such as exclusive access, free shipping, and more.</p>
-              <a href="#premium-benefits" className="cta-button">Join Now</a>
-            </div>
-            <div className="premium-image">
-              <img src="assets/premium-program.jpg" alt="Premium Program" />
-            </div>
-          </div>
-        </section>
-      </main>
-
-    </>
+  return (
+    <div
+      style={{
+        overflow: "hidden",
+        width: "100vw",
+        height: "100vh",
+        position: "relative",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <Draggable
+        axis="x"
+        position={{ x: dragPosition, y: 0 }} // Aktuelle Drag-Position
+        onDrag={(e, data) => {
+          // Setze die neue Drag-Position
+          setDragPosition(data.x);
+        }}
+        bounds={{ left: -(imageSize.width - window.innerWidth), right: 0 }} // Drag-Bereich anpassen
+      >
+        <div
+          style={{
+            backgroundImage: `url(${backgroundImage})`,
+            backgroundSize: "cover", // Vollständige Abdeckung
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center center", // Zentrierte Position des Bildes
+            width: `${imageSize.width}px`, // Dynamische Breite
+            height: `${imageSize.height}px`, // Dynamische Höhe
+            position: "absolute",
+            top: 0,
+            left: 0,
+          }}
+        >
+          {/* Punkt auf der Lampe */}
+          <a
+            href="/new-page" // Link zur neuen Seite
+            style={{
+              position: "absolute",
+              top: `${pointPosition.y}px`, // Y-Position des Punkts relativ zum Bild
+              left: `${pointPosition.x}px`, // X-Position des Punkts relativ zum Bild
+              width: "15px", // Größe des Punkts
+              height: "15px", // Größe des Punkts
+              backgroundColor: "white", // Farbe des Punkts
+              borderRadius: "50%", // Kreisförmiger Punkt
+              cursor: "pointer", // Zeiger ändert sich beim Hovern
+              transform: "translate(-50%, -50%)", // Punkt zentriert auf der Lampe
+            }}
+            title="Zur Lampe"
+          />
+        </div>
+      </Draggable>
+    </div>
   );
 
 };

@@ -6,7 +6,7 @@ import User from "../model/User.js"
 
 import asyncHandler from "../middleware/asyncHandler.js";
 
-export const signup = asyncHandler(async (req, res) => {
+export const signup = asyncHandler(async (req, res, next) => {
     const user = await User.create(req.body);
     await createCart(user);
     createSendToken(res, 201, user);
@@ -26,7 +26,7 @@ export const login = asyncHandler(async (req, res) => {
 
 
 
-export const logout = asyncHandler(async (req, res) => {
+export const logout = asyncHandler(async (req, res,next) => {
     res.clearCookie("jwtToken", {
         httpOnly: true,
         sameSite: "none",
