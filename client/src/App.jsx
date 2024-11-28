@@ -16,6 +16,7 @@ function App() {
           <Route path="/register" element={<Registration />} />
           <Route path="/likes" element={<Like />} />
           <Route path="*" element={<h1>notfound</h1>} />
+        
         </Route>
       </Routes>
     </div>
