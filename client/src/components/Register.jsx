@@ -72,6 +72,9 @@ const Registration = () => {
               Already registered?{" "}
               <a href="/login">Click here to connect to your account</a>.
             </p>
+            <div  classNmae="register-text">
+            <a href="#register" className="rg-button">REGISTER</a>
+            </div>
           </div>
         </form>
       </div>
