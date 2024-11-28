@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
 import './Home.css';
 const Home = () => {
   return (
@@ -29,7 +29,7 @@ const Home = () => {
             <div className="product-card">Chair</div>
           </div>
         </section>
-
+    
         <section className="about-us">
           <div className="about-us-container">
             <div className="about-us-text">
@@ -86,7 +86,7 @@ const Home = () => {
 
     </>
   );
-  
+
 };
 
 export default Home;
