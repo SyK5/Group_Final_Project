@@ -32,7 +32,7 @@ totalPrice: {
     default: 0,
 
 },
-createAt: {
+createdAt: {
     type: Date,
     default: Date.now,
 },
@@ -42,4 +42,4 @@ createAt: {
 
 const Cart = model("Cart", newCart);
 
-export default Cart; 
+export default mongoose.model("Cart", CartSchema);
