@@ -1,19 +1,26 @@
 import React, { createContext, useEffect, useReducer } from "react";
-import { useContext } from 'react'
+import { usersInitialState, usersReducer } from "../reducer/userReducer";
+
+import { useContext } from "react";
 
 export const MainContext = createContext();
 
-
 const Context_main = ({ children }) => {
+  const [usersState, usersDispatch] = useReducer(
+    usersReducer,
+    usersInitialState
+  );
+
   return (
     <MainContext.Provider
       value={{
-        // Values
+        usersState,
+        usersDispatch,
       }}
     >
       {children}
     </MainContext.Provider>
-  )
-}
+  );
+};
 
-export default Context_main
+export default Context_main;

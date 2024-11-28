@@ -43,14 +43,10 @@ export const logout = asyncHandler(async (req, res,next) => {
 
 export const protect = async (req, res, next) => {
     try {
-      const jwtToken = req.cookies.jwtToken;
-  
-      if (!jwtToken) throw createError(401, "Unauthorized request");
-  
-      const decoded = jwt.verify(jwtToken, process.env.JWT_SECRET);
-  
-      const user = await User.findById(decoded.id);
-  
+      const jwtToken = req.cookies.jwtToken;  
+      if (!jwtToken) throw createError(401, "Unauthorized request");  
+      const decoded = jwt.verify(jwtToken, process.env.JWT_SECRET);  
+      const user = await User.findById(decoded.id);  
       if (!user) throw createError(401, "User is no longer exist");
   
       req.user = user;

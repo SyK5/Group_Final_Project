@@ -23,6 +23,7 @@ const Navbar = () => {
       <NavLink to={"profile"} className='UserNav'><CiUser /></NavLink>
       <NavLink to={"likes"} className='HearthNav'><CiHeart /></NavLink>
       <NavLink className='MenuNav'><Menu /></NavLink>
+      
     </div>
   );
 };
