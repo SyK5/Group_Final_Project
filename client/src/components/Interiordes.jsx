@@ -5,7 +5,7 @@ import "./Homeowner.css";
 const Icon = ({ name }) => <span className="icon">{name}</span>;
 
 
-const Homeowner = () => {
+const InteriorDesigner = () => {
   const [modalData, setModalData] = useState(null);
 
   // Function to open the modal
@@ -434,4 +434,4 @@ const Homeowner = () => {
   );
 };
 
-export default Homeowner;
+export default InteriorDesigner;
