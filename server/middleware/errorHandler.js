@@ -1,9 +1,13 @@
-const errorHandler = (err, req, res, next) => {
-  const statusCode = err.statusCode || 500;
-  res.status(statusCode).json({
-    success: false,
-    message: err.message || "Internal Server Error",
-  });
-};
+import createError from 'http-errors';
 
-export default errorHandler;
+export const routeNotFound = () => {
+    throw createError(404, "Page was not found");
+  };
+  
+  export const globalErrorHandler = (err, req, res, next) => {
+    res.status(err.status || 500).json({
+      statusCode: err.status,
+      message: err.message,
+      stack: err.stack,
+    });
+  };
