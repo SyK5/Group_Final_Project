@@ -12,6 +12,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="/register" element={<Registration />} />
           <Route path="*" element={<h1>notfound</h1>} />
+        
         </Route>
       </Routes>
     </div>
