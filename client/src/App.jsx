@@ -11,12 +11,11 @@ function App() {
   return (
     <div>
       <Routes>
-     <Route index element = {<LoginPage/>}/>
-        
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="/register" element={<Registration />} />
           <Route path="/likes" element={<Like />} />
+          <Route path="/login" = {<LoginPage/>}/>
           <Route path="*" element={<h1>notfound</h1>} />
         
         </Route>
