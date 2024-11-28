@@ -14,7 +14,7 @@ body {
   /* Left Section: Image Frame */
   .image-section {
     flex: 1;
-    background-color: #58F3F3;
+    background-color: #99f2f3;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,4 +98,26 @@ body {
   .footer-text a:hover {
     text-decoration: underline;
   }
+
+  .rg-button {
+    display: inline-block;
+    background-color: #0061d0;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
   
+  .page {
+    transform: scale(1.1);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  /* Final style after the zoom-out */
+  .page.active {
+    transform: scale(1);
+    opacity: 1;
+  }
