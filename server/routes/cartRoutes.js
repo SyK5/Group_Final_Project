@@ -11,4 +11,4 @@ router.get("/:userId", getUserCart);
 
 router.delete("/:userId/delete-item/:productId", deleteItemFromCart)
 
-module.exports = router;
+export default router;
