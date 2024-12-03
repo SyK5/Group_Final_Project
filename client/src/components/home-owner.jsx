@@ -2,7 +2,10 @@ import React, {useState} from "react";
 import "./Homeowner.css";
 
 
-const HomeOwner = () => {
+const Icon = ({ name }) => <span className="icon">{name}</span>;
+
+
+const Homeowner = () => {
   const [modalData, setModalData] = useState(null);
 
   // Function to open the modal
@@ -16,8 +19,17 @@ const HomeOwner = () => {
   };
   return (
     <div>
-    
+      {/* Header Component */}
       <header className="header">
+        {/* Top Section */}
+        <div className="top-section">
+          <div className="logo">Evora</div>
+          <div className="icons">
+            <Icon name="Login" />
+            <Icon name="Wishlist" />
+            <Icon name="Dropdown" />
+          </div>
+        </div>
 
         {/* Main Header Section */}
         <div className="main-header">
@@ -422,4 +434,4 @@ const HomeOwner = () => {
   );
 };
 
-export default HomeOwner;
+export default Homeowner;
