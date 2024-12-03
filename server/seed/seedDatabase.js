@@ -1,8 +1,14 @@
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import Product from "../models/Product.js";
 
+import Product from "../models/Product.js";
+import connectDB from "../libs/database.js"
 dotenv.config();
+console.log("DB_URI:", process.env.DB_URI);
+
+if (!process.env.DB_URI) {
+  console.error("DB_URI is undefined!");
+}
 
 const seedProducts = async () => {
   const sampleProducts = [
@@ -25,9 +31,9 @@ const seedProducts = async () => {
       image_name: "https://ik.imagekit.io/xkwthq1rxmd/liveonlinetapijten/catalog/product/cache/9a16e1a5e994ed25951c854c1c82627c/n/o/nourison_prismatic_carpet_prism_prs28_grygd_grey_gold_8x10_099446891921_flat.jpg",
     },
   ];
-  console.log("Mongo URI:", process.env.DB_URI)
+
   try {
-    await mongoose.connect(process.env.DB_URI);
+    await connectDB();
     console.log("Connected to the database");
 
    
