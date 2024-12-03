@@ -24,9 +24,7 @@ app.use('/api/favorites', favoritesRoutes);
 app.use('/api/cart', cartRoutes); 
 app.use('/api/users', userRoutes); 
 
-app.use((req, res) => {
-  res.status(404).json({ message: 'Route not found' });
-});
+
 
 app.use(routeNotFound);
 app.use(globalErrorHandler);
