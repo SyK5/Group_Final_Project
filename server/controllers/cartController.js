@@ -1,8 +1,8 @@
-import User from "../model/User.js"
-import Cart from "../model/Cart.js"
+import User from "../models/User.js"
+import Cart from "../models/Cart.js"
 import asyncHandler from "../middleware/asyncHandler.js";
 
-const createCart = asyncHandler(async (req, res) => {
+export const createCart = asyncHandler(async (req, res) => {
     const { userId } = req.params;
     const user = await User.findById(userId);
     if (!user) throw new Error("User not found");
@@ -19,7 +19,7 @@ const createCart = asyncHandler(async (req, res) => {
     res.status(201).json(newCart);
 });
 
-const addItemToCart = asyncHandler(async (req, res) => {
+export const addItemToCart = asyncHandler(async (req, res) => {
     const { userId } = req.params;
     const { productId, quantity, price } = req.body;
     const cart = await Cart.findOne({ user: userId });
@@ -37,7 +37,7 @@ const addItemToCart = asyncHandler(async (req, res) => {
     res.status(200).json(cart);
 });
 
-const getUserCart = asyncHandler(async (req, res) => {
+export const getUserCart = asyncHandler(async (req, res) => {
     const { userId } = req.params;
     const cart = await Cart.findOne({ user: userId })
         .populate("items.productId")
@@ -45,7 +45,7 @@ const getUserCart = asyncHandler(async (req, res) => {
     res.status(200).json(cart);
 });
 
-const deleteItemFromCart = asyncHandler(async (req, res) => {
+export const deleteItemFromCart = asyncHandler(async (req, res) => {
     const { userId, productId } = req.params;
     const cart = await Cart.findOne({ user: userId });
     if (!cart) throw new Error("Cart not found");
@@ -56,4 +56,4 @@ const deleteItemFromCart = asyncHandler(async (req, res) => {
     await cart.save();
     res.status(200).json(cart);
 });
-module.exports = {createCart, addItemToCart, getUserCart, deleteItemFromCart};
+

@@ -1,7 +1,7 @@
-import asyncHandler from "../middleware/asyncHandler";
-import User from "../model/User";
+import asyncHandler from "../middleware/asyncHandler.js";
+import User from "../models/User.js";
 
-const addFavorite = asyncHandler(async (req, res) => {
+export const addFavorite = asyncHandler(async (req, res) => {
   const { userId, productId } = req.body;
   const user = await User.findById(userId);
   if (!user) {
@@ -19,7 +19,7 @@ const addFavorite = asyncHandler(async (req, res) => {
     favorites: updatedUser.favorites,
   });
 });
-const removeFavorite = asyncHandler(async (req, res) => {
+export const removeFavorite = asyncHandler(async (req, res) => {
   const { userId, productId } = req.body;
   const user = await User.findById(userId);
   if (!user) {
@@ -37,7 +37,7 @@ const removeFavorite = asyncHandler(async (req, res) => {
   });
 });
 
-const moveFavoriteToCart = asyncHandler(async (req, res) => {
+export const moveFavoriteToCart = asyncHandler(async (req, res) => {
   const { userId, productId } = req.body;
   const user = await User.findById(userId);
   if (!user) {
@@ -59,8 +59,14 @@ const moveFavoriteToCart = asyncHandler(async (req, res) => {
     cart: updatedUser.cart,
   });
 });
-module.exports = {
-  addFavorite,
-  removeFavorite,
-  moveFavoriteToCart,
-};
+export const getFavorites = asyncHandler(async (req, res) => {
+  const { userId } = req.params;
+
+  const user = await User.findById(userId).populate('favorites');
+  if (!user) {
+    return res.status(404).json({ message: 'User not found' });
+  }
+
+  res.status(200).json(user.favorites);
+});
+

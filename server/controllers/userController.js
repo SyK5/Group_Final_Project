@@ -1,8 +1,8 @@
 import createError from "http-errors"
-import createCart from "cartController.js"
-import { createSendToken } from "../libs/jwt"
+import {createCart} from "./cartController.js"
+import { createSendToken } from "../libs/jwt.js"
 
-import User from "../model/User.js"
+import User from "../models/User.js"
 
 import asyncHandler from "../middleware/asyncHandler.js";
 

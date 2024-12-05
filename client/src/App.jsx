@@ -8,8 +8,9 @@ import Homeowner from "./components/home-owner.jsx";
 import InteriorDesigner from "./components/Interiordes.jsx";
 import Premember from "./components/Premium-member.jsx";
 
-
 import "./App.scss";
+
+
 function App() {
   return (
     <div>
@@ -21,7 +22,6 @@ function App() {
           <Route path="home-owner" element={ <Homeowner /> } />
           <Route path="interior-designer" element={ < InteriorDesigner /> } />
           <Route path="premium-member" element={ < Premember /> } />
-          
           <Route path="*" element={<h1>notfound</h1>} />
         
         

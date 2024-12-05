@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./Homeowner.css";
 
-const Interiordes = () => {
+
+const InteriorDesigner = () => {
   const [modalData, setModalData] = useState(null);
 
   
@@ -405,4 +406,5 @@ const Interiordes = () => {
     </div>
   );
 };
-export default Interiordes;
+export default InteriorDesigner;
+
