@@ -6,6 +6,7 @@ import Layout from "./components/Layout.jsx";
 import Like from "./components/Like.jsx";
 import Homeowner from "./components/home-owner.jsx";
 import InteriorDesigner from "./components/Interiordes.jsx";
+import Premember from "./components/Premium-member.jsx";
 
 import "./App.scss";
 
@@ -20,7 +21,9 @@ function App() {
           <Route path="/likes" element={<Like />} />
           <Route path="home-owner" element={ <Homeowner /> } />
           <Route path="interior-designer" element={ < InteriorDesigner /> } />
+          <Route path="premium-member" element={ < Premember /> } />
           <Route path="*" element={<h1>notfound</h1>} />
+        
         
         </Route>
       </Routes>
