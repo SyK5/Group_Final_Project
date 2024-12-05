@@ -1,7 +1,7 @@
-import React, {useState} from "react";
+import React, { useState } from "react"; 
 import "./Homeowner.css";
 
-const Homeowner = () => {
+const Premember = () => {
   const [modalData, setModalData] = useState(null);
 
   
@@ -22,7 +22,7 @@ const Homeowner = () => {
         <div className="main-header">
           <div className="text-overlay">
             <h1>Elegance Beyond the Ordinary</h1>
-            <button className="explore-btn"  onClick={() => document.getElementById("product-table").scrollIntoView({ behavior: "smooth" })}>Explore Collection</button>
+            <button className="explore-btn">Explore Collection</button>
           </div>
         </div>
       </header>
@@ -137,7 +137,7 @@ const Homeowner = () => {
             </div>
           </div>
         </section>
-        <section id="product-table" className="product-section">
+        <section className="product-section">
   <h2 className="product-title">Explore Our Exclusive Collection</h2>
   <div className="product-grid">
   
@@ -163,7 +163,7 @@ const Homeowner = () => {
     </div>
 
     
-    <div  className="product-item">
+    <div className="product-item">
       <img
         src="https://via.placeholder.com/150"
         alt="Table"
@@ -406,4 +406,4 @@ const Homeowner = () => {
   );
 };
 
-export default Homeowner;
+export default Premember;
