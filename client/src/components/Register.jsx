@@ -1,10 +1,20 @@
 import React from 'react';
-import './Registration.css'; // Import the CSS file for styling
+import './Registration.css'; 
+import { useContext } from 'react';
+import Context_main, { MainContext } from '../contexts/Context_main';
 
-const Registration = () => {
+  const Registration = () => {
+
+
+    
+  const [usersState, usersDispatch]= useContext(MainContext);
+  const handleRegister = () => {
+    usersDispatch({ type: "REGISTER_USER", payload: {} });
+    console.log(usersState)
+  };
   return (
     <div className="registration-container">
-      {/* Left Section: Image Frame */}
+    
       <div className="image-section">
         <img 
           src="your-image-url.jpg" 
@@ -13,11 +23,11 @@ const Registration = () => {
         />
       </div>
 
-      {/* Right Section: Registration Form */}
+      
       <div className="form-section">
         <h1 className="brand-name">Elvora</h1>
         <form className="registration-form">
-          {/* First Name and Last Name */}
+        
           <div className="form-group">
             <label htmlFor="first-name">First Name</label>
             <input type="text" id="first-name" name="first-name" required />
@@ -29,14 +39,14 @@ const Registration = () => {
             <span className="underline"></span>
           </div>
 
-          {/* Username */}
+          
           <div className="form-group">
             <label htmlFor="username">Username</label>
             <input type="text" id="username" name="username" required />
             <span className="underline"></span>
           </div>
 
-          {/* Gender */}
+          
           <div className="form-group">
             <label htmlFor="gender">Gender</label>
             <select id="gender" name="gender" required>
@@ -49,7 +59,7 @@ const Registration = () => {
             <span className="underline"></span>
           </div>
 
-          {/* Password and Confirm Password */}
+      
           <div className="form-group">
             <label htmlFor="password">Password</label>
             <input type="password" id="password" name="password" required />
@@ -73,7 +83,7 @@ const Registration = () => {
               <a href="/login">Click here to connect to your account</a>.
             </p>
             <div  classNmae="register-text">
-            <a href="#register" className="rg-button">REGISTER</a>
+            <a onClick={handleRegister} href="#register" className="rg-button">REGISTER</a>
             </div>
           </div>
         </form>

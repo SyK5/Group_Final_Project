@@ -11,12 +11,13 @@ const Context_main = ({ children }) => {
     usersInitialState
   );
 
+
   return (
     <MainContext.Provider
-      value={{
-        usersState,
-        usersDispatch,
-      }}
+      value={
+        [usersState,
+        usersDispatch]
+      }
     >
       {children}
     </MainContext.Provider>

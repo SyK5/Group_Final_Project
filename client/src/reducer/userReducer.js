@@ -19,6 +19,13 @@ export const usersInitialState = {
           likes: action.payload.likes,
         };
   
+      case "REGISTER":
+      return { 
+        ...state,
+        user: action.payload.user,
+      };
+
+
       case "LOGOUT":
         return usersInitialState;
   
