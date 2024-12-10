@@ -2,22 +2,10 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import './Home.css';
 const Home = () => {
-  const categories = [
-    { name: "Living Room", image: "../images/pic8.webp" },
-    { name: "Dining Room", image: "../images/pic6.webp" },
-    { name: "Bedroom", image: "../images/register.webp" },
-    { name: "Outdoor", image: "../images/pic10.webp" },
-  ];
-
-  const products = [
-    { name: "Chair", image: "../images/pic2.webp" },
-    { name: "Table", image: "../images/pic4.webp" },
-    { name: "Sofa", image: "../images/pic10.webp" },
-  ];
   return (
     <>
       <header className="header">
-       <div className="hero">
+       <div className="hero-content">
          <h1>Welcome to Elvora</h1>
          <p>Discover timeless elegance for your living space.</p>
          <a href="#categories" className="cta-button">Shop Now</a>
@@ -46,9 +34,9 @@ const Home = () => {
           <h2>Our Best-sellers</h2>
           <p>Premium only</p>
           <div className="product-grid">
-            <div className="product-card"><img src="../images/Lounge furniture.png"alt=""height="100%" weight="100%"/></div>
-            <div className="product-card"><img src="../images/livingroom.jpeg"alt=""height="100%" weight="100%"/></div>
-            <div className="product-card"><img src="../images/livingroom1.jpeg"alt=""height="100%" weight="100%"/></div>
+            <div className="product-card"><img src="../images/pic14.png"alt=""height="100%" weight="100%"/></div>
+            <div className="product-card"><img src="../images/pic15.png"alt=""height="100%" weight="100%"/></div>
+            <div className="product-card"><img src="../images/pic16.png"alt=""height="100%" weight="100%"/></div>
           </div>
         </section>
 
