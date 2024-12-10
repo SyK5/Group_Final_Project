@@ -22,7 +22,7 @@ const Homeowner = () => {
         <div className="main-header">
           <div className="text-overlay">
             <h1>Elegance Beyond the Ordinary</h1>
-            <button className="explore-btn"  onClick={() => document.getElementById("product-table").scrollIntoView({ behavior: "smooth" })}>Explore Collection</button>
+            <a href="#product-table" className="explore-btn">Explore collection</a>
           </div>
         </div>
       </header>
