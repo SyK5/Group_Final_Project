@@ -20,7 +20,7 @@ const Navbar = () => {
   return (
     <div className="Navbar">
       <NavLink to={"/"} className='Title'> Elvora </NavLink>
-      <NavLink to={"profile"} className='UserNav'><CiUser /></NavLink>
+      <NavLink to={"register"} className='UserNav'><CiUser /></NavLink>
       <NavLink to={"likes"} className='HearthNav'><CiHeart /></NavLink>
       <NavLink className='MenuNav'><Menu /></NavLink>
       
