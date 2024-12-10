@@ -1,22 +1,35 @@
 import React, { useEffect, useState } from "react";
 import './Home.css';
 const Home = () => {
+  const categories = [
+    { name: "Living Room", image: "../images/pic8.webp" },
+    { name: "Dining Room", image: "../images/pic6.webp" },
+    { name: "Bedroom", image: "../images/register.webp" },
+    { name: "Outdoor", image: "../images/pic10.webp" },
+  ];
+
+  const products = [
+    { name: "Chair", image: "../images/pic2.webp" },
+    { name: "Table", image: "../images/pic4.webp" },
+    { name: "Sofa", image: "../images/pic10.webp" },
+  ];
   return (
     <>
       <header className="header">
-        <h1>ELVORA</h1>
-        <p>Elegance Beyond the Ordinary</p>
-        <a href="#categories" className="cta-button">Join the experience</a>
-      </header>
-
+       <div className="hero">
+         <h1>Welcome to Elvora</h1>
+         <p>Discover timeless elegance for your living space.</p>
+         <a href="#categories" className="cta-button">Shop Now</a>
+       </div>
+</header>
       <main>
         <section id="categories" className="featured-categories">
           <h2>Featured Categories</h2>
           <div className="category-grid">
-            <div className="category-card">Living Room</div>
-            <div className="category-card">Living Room</div>
-            <div className="category-card">Living Room</div>
-            <div className="category-card">Living Room</div>
+            <div className="category-card"><img src="../images/pic2.webp"alt=""height="100%" weight="100%"/></div>
+            <div className="category-card"><img src="../images/floor vase-1.jpg"alt=""height="100%" weight="100%"/></div>
+            <div className="category-card"><img src="../images/pic3.webp"alt=""height="100%" weight="100%"/></div>
+            <div className="category-card"><img src="../images/pic4.webp"alt=""height="100%" weight="100%"/></div>
           </div>
         </section>
 
@@ -24,9 +37,9 @@ const Home = () => {
           <h2>Our Best-sellers</h2>
           <p>Premium only</p>
           <div className="product-grid">
-            <div className="product-card">Chair</div>
-            <div className="product-card">Chair</div>
-            <div className="product-card">Chair</div>
+            <div className="product-card"><img src="../images/Lounge furniture.png"alt=""height="100%" weight="100%"/></div>
+            <div className="product-card"><img src="../images/livingroom.jpeg"alt=""height="100%" weight="100%"/></div>
+            <div className="product-card"><img src="../images/livingroom1.jpeg"alt=""height="100%" weight="100%"/></div>
           </div>
         </section>
 
@@ -39,7 +52,7 @@ const Home = () => {
               <p>Our agents are here to help you with finding the perfect products for you.</p>
             </div>
             <div className="guidance-image">
-              <img src="assets/guidance-image.jpg" alt="Guidance Image" />
+              <img src="../images/pic11.png" alt="Guidance Image" />
             </div>
           </div>
         </section>
@@ -52,7 +65,7 @@ const Home = () => {
               <a href="#premium" className="cta-button">More Info</a>
             </div>
             <div className="exclusive-image">
-              <img src="assets/exclusive-items.jpg" alt="Exclusive Items" />
+              <img src="../images/pic12.png" alt="Exclusive Items" />
             </div>
           </div>
         </section>
@@ -65,7 +78,7 @@ const Home = () => {
               <a href="#premium-benefits" className="cta-button">Join Now</a>
             </div>
             <div className="premium-image">
-              <img src="assets/premium-program.jpg" alt="Premium Program" />
+              <img src="../images/pic13.png" alt="Premium Program" />
             </div>
           </div>
         </section>
