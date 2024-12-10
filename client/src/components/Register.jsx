@@ -17,7 +17,7 @@ import Context_main, { MainContext } from '../contexts/Context_main';
     
       <div className="image-section">
         <img 
-          src="your-image-url.jpg" 
+          src="../images/register.webp" 
           alt="Welcome to Elvora" 
           className="registration-image" 
         />

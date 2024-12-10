@@ -14,7 +14,7 @@ const Footer = () => {
               <a href="#more-info" className="cta-button">More infos</a>
             </div>
             <div className="about-us-image">
-              <img src="assets/about-us-image.jpg" alt="About Us Image" />
+              
             </div>
           </div>
         </section>
