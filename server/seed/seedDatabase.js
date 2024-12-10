@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 
 import Product from "../models/Product.js";
 import connectDB from "../libs/database.js"
+
 dotenv.config();
 console.log("DB_URI:", process.env.DB_URI);
 
