@@ -18,17 +18,33 @@ p {
   font-size: 20px;
 
 }
-
-
 .header {
+  background: url('../images/pic10.webp') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
   text-align: center;
-  padding: 50px 20px;
-  background-color: #f9f9f9;
+  position: relative;
 }
 
-.header h1 {
-  font-size: 3rem;
-  margin: 0;
+.hero-content {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.tagline {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .header p {
@@ -53,6 +69,7 @@ p {
 
 .featured-categories, .best-sellers, .guidance-section, .exclusive-items, .premium-program {
   padding: 50px 20px;
+  background-color: #f9f9f9;
 }
 
 .category-grid, .product-grid {
