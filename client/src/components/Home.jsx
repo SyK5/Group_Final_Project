@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import './Home.css';
 const Home = () => {
   const categories = [
@@ -23,15 +24,23 @@ const Home = () => {
        </div>
 </header>
       <main>
-        <section id="categories" className="featured-categories">
-          <h2>Featured Categories</h2>
-          <div className="category-grid">
-            <div className="category-card"><img src="../images/pic2.webp"alt=""height="100%" weight="100%"/></div>
-            <div className="category-card"><img src="../images/floor vase-1.jpg"alt=""height="100%" weight="100%"/></div>
-            <div className="category-card"><img src="../images/pic3.webp"alt=""height="100%" weight="100%"/></div>
-            <div className="category-card"><img src="../images/pic4.webp"alt=""height="100%" weight="100%"/></div>
-          </div>
-        </section>
+      <section id="categories" className="featured-categories">
+        <h2>Featured Categories</h2>
+        <div className="category-grid">
+          <Link to="/products/livingroom" className="category-card">
+            <img src="../images/pic2.webp" alt="Living Room" />
+          </Link>
+          <Link to="/products/vases" className="category-card">
+            <img src="../images/floor vase-1.jpg" alt="Vases" />
+          </Link>
+          <Link to="/products/tables" className="category-card">
+            <img src="../images/pic3.webp" alt="Tables" />
+          </Link>
+          <Link to="/products/lamps" className="category-card">
+            <img src="../images/pic4.webp" alt="Lamps" />
+          </Link>
+        </div>
+      </section>
 
         <section className="best-sellers">
           <h2>Our Best-sellers</h2>

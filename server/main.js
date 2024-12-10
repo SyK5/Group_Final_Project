@@ -6,18 +6,27 @@ import favoritesRoutes from './routes/favoritesRoutes.js';
 import cartRoutes from './routes/cartRoutes.js';
 import userRoutes from './routes/userRoutes.js'; 
 import {globalErrorHandler,routeNotFound } from './middleware/errorHandler.js';
+import cors from 'cors';
 
 
 dotenv.config();
+
 await connectDB();
+
+
 
 const app = express();
 
 
 app.use(express.json());
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5001;
 
-
+app.use(
+  cors({
+    origin: process.env.CLIENT_URL, 
+    credentials: true,              
+  })
+);
 
 app.use('/api/products', productRoutes);
 app.use('/api/favorites', favoritesRoutes);

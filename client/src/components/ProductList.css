@@ -1,0 +1,106 @@
+/* Global Font and Colors */
+:root {
+    --primary-color: #333;
+    --accent-color: #c6a76f;
+    --bg-color: #f7f7f7;
+    --font-family: 'Poppins', sans-serif;
+    --text-dark: #444;
+    --text-light: #777;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-list {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .product-list h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    font-family: var(--font-family);
+    font-weight: 600;
+    margin-bottom: 40px;
+  }
+  
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+  }
+  
+  .product-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px var(--shadow-color);
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px var(--shadow-color);
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+  
+  .product-card .product-info {
+    margin-top: 15px;
+  }
+  
+  .product-card .product-name {
+    font-family: var(--font-family);
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin: 10px 0;
+  }
+  
+  .product-card .product-description {
+    font-family: var(--font-family);
+    font-size: 1rem;
+    color: var(--text-dark);
+    margin: 10px 0;
+    line-height: 1.5;
+  }
+  
+  .product-card .product-price {
+    font-family: var(--font-family);
+    font-size: 1.25rem;
+    color: var(--accent-color);
+    font-weight: bold;
+    margin: 15px 0;
+  }
+  
+  .product-card .add-to-cart-btn {
+    background: var(--accent-color);
+    color: white;
+    font-family: var(--font-family);
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .product-card .add-to-cart-btn:hover {
+    background: darken(var(--accent-color), 10%);
+  }
+  
+  .no-products {
+    font-size: 1.5rem;
+    color: var(--text-light);
+    margin-top: 50px;
+  }
+  
