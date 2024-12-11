@@ -1,0 +1,99 @@
+/* General Form Styles */
+.login-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+  }
+  
+  .form-section {
+    flex: 1;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .underline {
+    display: block;
+    height: 2px;
+    background: #c6a76f;
+    margin-top: 5px;
+  }
+  
+  .rg-button {
+    background: #c6a76f;
+    color: white;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .rg-button:hover {
+    background: #a17c50;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+  
+  /* Image Section */
+  .image-section {
+    width: 400px;
+    text-align: center;
+  }
+  
+  .login-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .footer-text {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 20px;
+  }
+  
+  .footer-text a {
+    color: #c6a76f;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 5px;
+  }
+  
+  .footer-text a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Consistent Button Styling */
+  button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+  
+  
