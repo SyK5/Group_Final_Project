@@ -1,19 +1,44 @@
-import React, {useState} from "react";
+import React, { useState, useEffect } from "react";
 import "./Homeowner.css";
 
+const API_URL = "http://localhost:5000"; // Base URL for your API
+
 const Homeowner = () => {
-  const [modalData, setModalData] = useState(null);
+  const [premiumProducts, setPremiumProducts] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const productsPerPage = 12; // Number of products to display per page
 
-  
-  const openModal = (data) => {
-    setModalData(data); 
+  // Fetch premium products from the API
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch(`${API_URL}/api/premium-products`);
+        if (!response.ok) {
+          throw new Error("Failed to fetch premium products");
+        }
+        const data = await response.json();
+        setPremiumProducts(data);
+      } catch (error) {
+        console.error("Error fetching premium products:", error);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+
+  // Pagination Logic
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+  const currentProducts = premiumProducts.slice(indexOfFirstProduct, indexOfLastProduct);
+  const totalPages = Math.ceil(premiumProducts.length / productsPerPage);
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) setCurrentPage(currentPage + 1);
   };
 
-
-  const closeModal = () => {
-    setModalData(null); 
-  };
-  return (
+  const handlePrevPage = () => {
+    if (currentPage > 1) setCurrentPage(currentPage - 1);
+  };  return (
     <div>
       
       <header className="header">
@@ -47,44 +72,45 @@ const Homeowner = () => {
         <section className="premium-section">
           <h2 className="premium-title">For Premium Members Only</h2>
           <div className="premium-links">
-            
-            <div className="premium-item">
-              <img
-                src="client/images/Lounge furniture.png" 
-                alt="Lounge furniture"
-                className="premium-image"
-              />
-              <div className="overlay-text">For Premium Members Only</div>
-              <a href="/premium-item-1" className="more-info">
-                More info -
-              </a>
-            </div>
+            {currentProducts.length > 0 ? (
+              currentProducts.map((product, index) => (
+                <div key={index} className="premium-item">
+                  <img
+                    src={product.image || "https://via.placeholder.com/150"}
+                    alt={product.name}
+                    className="premium-image"
+                  />
+                  <div className="premium-details">
+                    <h3 className="premium-name">{product.name}</h3>
+                    <p className="premium-description">{product.description}</p>
+                    <p className="premium-price">{`Price: $${product.price}`}</p>
+                  </div>
+                </div>
+              ))
+            ) : (
+              <p>No premium products available at the moment.</p>
+            )}
+          </div>
 
-            
-            <div className="premium-item">
-              <img
-                src="client/images/dinnertable.webp" 
-                alt="Dinner table"
-                className="premium-image"
-              />
-              <div className="overlay-text">For Premium Members Only</div>
-              <a href="/premium-item-2" className="more-info">
-                More info -
-              </a>
-            </div>
-
-            
-            <div className="premium-item">
-              <img
-                src="client/images/livingroom 3.jpeg" 
-                alt="living room furniture"
-                className="premium-image"
-              />
-              <div className="overlay-text">For Premium Members Only</div>
-              <a href="/premium-item-3" className="more-info">
-                More info -
-              </a>
-            </div>
+          {/* Pagination Controls */}
+          <div className="pagination-controls">
+            <button
+              className="pagination-btn"
+              onClick={handlePrevPage}
+              disabled={currentPage === 1}
+            >
+              Previous
+            </button>
+            <span>
+              Page {currentPage} of {totalPages}
+            </span>
+            <button
+              className="pagination-btn"
+              onClick={handleNextPage}
+              disabled={currentPage === totalPages}
+            >
+              Next
+            </button>
           </div>
         </section>
             
