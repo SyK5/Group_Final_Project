@@ -2,23 +2,24 @@ import User from "../models/User.js"
 import Cart from "../models/Cart.js"
 import asyncHandler from "../middleware/asyncHandler.js";
 
-export const createCart = asyncHandler(async (req, res) => {
-    const { userId } = req.params;
-    const user = await User.findById(userId);
-    if (!user) throw new Error("User not found");
-
-    const newCart = new Cart({
-        user: user._id,
-        items: [],
-        totalPrice: 0,
-    });
-
-    await newCart.save();
-    user.cart = newCart._id;
-    await user.save();
-    res.status(201).json(newCart);
-});
-
+export const createCart = async (req, res, next) => {
+    try {
+      const { userId } = req.params;  
+  
+      if (!userId) {
+        throw new Error("User ID is required");
+      }
+  
+      const cart = await Cart.create({ userId, products: [] });
+      
+      res.status(201).json({
+        success: true,
+        data: cart,
+      });
+    } catch (error) {
+      next(error); 
+    }
+  };
 export const addItemToCart = asyncHandler(async (req, res) => {
     const { userId } = req.params;
     const { productId, quantity, price } = req.body;
